@@ -22,7 +22,7 @@ class Program
         hoursWorked = Convert.ToInt32(Console.ReadLine());
 
         Console.WriteLine("");
-        Console.WriteLine("Your income is, $" + hoursWorked * hourlyRate * (1.00 - 0.18 ));
+        Console.WriteLine("Your income is, $" + hoursWorked * hourlyRate * (1.00 - 0.18));
         Console.WriteLine("The government will take, $" + hoursWorked * hourlyRate * 0.18);
 
         Console.WriteLine("\nDone.");

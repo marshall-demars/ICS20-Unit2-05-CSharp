@@ -10,9 +10,12 @@ class Program
     public static void Main(string[] args)
     {
         // This function accepts user input
+        const float HST = 0.13F;
         int hourlyRate;
         int hoursWorked;
-
+        float money;
+      
+        //input
         Console.WriteLine("This program finds your income");
         Console.WriteLine("");
 
@@ -21,9 +24,14 @@ class Program
         Console.Write("Enter your hours worked: ");
         hoursWorked = Convert.ToInt32(Console.ReadLine());
 
+        // process
+        money = (1 - HST);
+        // calculations
+
+        // output
         Console.WriteLine("");
-        Console.WriteLine("Your income is, $" + hoursWorked * hourlyRate * (1.00 - 0.18));
-        Console.WriteLine("The government will take, $" + hoursWorked * hourlyRate * 0.18);
+        Console.WriteLine("Your income is, $" + hoursWorked * hourlyRate * (money));
+        Console.WriteLine("The government will take, $" + hoursWorked * hourlyRate * HST);
 
         Console.WriteLine("\nDone.");
     }

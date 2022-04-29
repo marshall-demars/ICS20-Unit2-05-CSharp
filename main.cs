@@ -14,8 +14,8 @@ class Program
         int hourlyRate;
         int hoursWorked;
         float money;
-      
-        //input
+
+        // input
         Console.WriteLine("This program finds your income");
         Console.WriteLine("");
 

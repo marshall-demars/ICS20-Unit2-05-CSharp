@@ -13,7 +13,9 @@ class Program
         const float HST = 0.13F;
         int hourlyRate;
         int hoursWorked;
-        float money;
+        double money;
+        double income;
+        double government;
 
         // input
         Console.WriteLine("This program finds your income");
@@ -26,12 +28,14 @@ class Program
 
         // process
         money = (1 - HST);
+        income = hoursWorked * hourlyRate * (money);
+        government = hoursWorked * hourlyRate * HST;
         // calculations
 
         // output
         Console.WriteLine("");
-        Console.WriteLine("Your income is, $" + hoursWorked * hourlyRate * (money));
-        Console.WriteLine("The government will take, $" + hoursWorked * hourlyRate * HST);
+        Console.WriteLine("Your income is, $" + income.ToString("N2"));
+        Console.WriteLine("The government took, $" + government.ToString("N2"));
 
         Console.WriteLine("\nDone.");
     }
